@@ -1,0 +1,82 @@
+/*
+
+#FDFDFD - white with a tint of light gray
+#FFDB5C - yellow
+#FE6594 - pink
+*/
+
+/* Homepage */
+body {
+    background-color: #FDFDFD;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+nav {
+    margin: 1.5rem;
+}
+
+h6 {
+    color: #FE6594
+}
+
+/* Logo */
+#logo {
+    color: #FFDB5C;
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+}
+
+/* Navigation Bar */
+.nav-item {
+    font-family: 'Roboto Slab', serif;
+    /* font-size: 1.5rem; maybe consider it to make it appear larger */
+    font-weight: 300;
+}
+
+a {
+    color: #FE6594;
+}
+
+.navbar-right a:hover {
+    color: #FE6594;
+}
+
+.navbar-right  a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    background: #FE6594;;
+    transition: width 0.5s;
+}
+
+.navbar-right a:hover::after {
+    width: 100%;
+}
+
+
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: transparent;
+    text-shadow: 0px 1px #FE6594;
+}
+
+.btn {
+    border: 0.1rem solid #FE6594;
+    border-radius: 5rem;
+    background-color: white;
+    color: #FE6594;
+    padding: 0.5rem 3rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.btn:hover {
+    color: #FE6594;
+    box-shadow: 5px 5px #FFDB5C;
+}
+
+.col-12 p {
+    color: #FE6594;
+}
