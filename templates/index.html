@@ -41,45 +41,71 @@
                 <!-- right align -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="CallWaiting_Home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">How It Works</a>
+                        <a class="nav-link" href="CallWaiting_How_It_Works.html">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Why CallWaiting</a>
+                        <a class="nav-link" href="CallWaiting_Why.html">Why CallWaiting</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Request A Demo!</a>
+                        <a class="nav-link" href="CallWaiting_Request_A_Demo.html">Request A Demo!</a>
                     </li>
                 </ul>
-                <button class="btn" onclick="openForm()">Customer Login</button>
-			<div class="form-popup" id="myForm">
-			  <form action="/action_page.php" class="form-container"><!--need to change-->
-				<h1>Login</h1>
+			
+				<button class="btn" onclick="openForm()">Customer Login</button>
+					<div class="form-popup" id="myForm">
+					  <form action="/action_page.php" class="form-container"><!--need to change-->
+						<h1>Login</h1>
 
-				<label for="email"><b>Email:</b></label>
-				<input type="text" placeholder="Enter Email" name="email" required>
+						<label for="email"><b>Email:</b></label>
+						<input type="text" placeholder="Enter Email" name="email" required>
 
-				<label for="psw"><b>Password:</b></label>
-				<input type="password" placeholder="Enter Password" name="psw" required>
+						<label for="psw"><b>Password:</b></label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
 
-				<button type="submit" class="btn login">Login</button>
-				<a href="create_an_account.html"><button type="button" class="btn create-an-account">Create an Account</button></a>
-				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-			  </form>
-			</div>
-		<button class="btn" onclick="openForm()">Provider Login</button>
+						<button type="submit" class="btn login">Login</button>
+						<a href="create_an_account.html"><button type="button" class="btn create-an-account">Create an Account</button></a>
+						<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+					  </form>
+					</div>
+				<button class="btn" onclick="openForm2()">Provider Login</button>
+					<div class="form-popup" id="myForm2">
+					  <form action="/action_page.php" class="form-container"><!--need to change-->
+						<h1>Login</h1>
+
+						<label for="email"><b>Email:</b></label>
+						<input type="text" placeholder="Enter Email" name="email" required>
+
+						<label for="psw"><b>Password:</b></label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
+
+						<button type="submit" class="btn login">Login</button>
+						<!--<a href="create_an_account.html"><button type="button" class="btn create-an-account">Create an Account</button></a>-->
+						<button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+					  </form>
+					</div>				
             </div>
         </div>
     </nav>
 <script>
 function openForm() {
   document.getElementById("myForm").style.display = "block";
+  closeForm2();
 }
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+}
+
+function openForm2() {
+  document.getElementById("myForm2").style.display = "block";
+  closeForm();
+}
+
+function closeForm2() {
+  document.getElementById("myForm2").style.display = "none";
 }
 </script>
     <!--
