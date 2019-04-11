@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CallWaiting</title>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- Pacifico font for Logo -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- Roboto Slab font for everything else -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
+    <!-- iPhone -->
+	  <link rel="stylesheet" href="/static/devices.min.css" type="text/css">
+
+    <link rel="stylesheet" href="/static/CallWaiting.css">
+
+    <script>
+    $(function(){
+        $("#nav").load("/static/nav.html");
+        $("#footer").load("/static/footer.html");
+    });
+    </script>
+</head>
+
+<body>
+
+
+    <!-- navigation -->
+    <nav class="navbar navbar-light">
+        <div id="nav"></div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <form action="/contact-us" method='POST'>
+                <textarea class="form-control" name="contents" placeholder="What issue are you having?"></textarea>
+                <input type="submit" class="btn btn-success" value="Send">
+            </form>
+        </div>
+
+    </div>
+
+    <!--
+    <form method="POST" action="/main">
+        <p>Username: </p>
+        <input name="customerUsername">
+        <p>Password: </p>
+        <input name="customerPassword">
+        <input type="submit" name='login' value="User Login">
+    </form>
+    <a href="/register">Get a free account</a>
+    <form method="POST" action="/main">
+        <p>Username: </p>
+        <input name="providerUsername">
+        <p>Password: </p>
+        <input name="providerPassword">
+        <input type="submit" name='login' value="Provider Login">
+    </form>
+    -->
+    
+
+    <!--- Footer --->
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+</body>
+</html>
