@@ -237,3 +237,114 @@ img {
     width: 14px;
     height: 14px;
 }
+
+/************* PROVIDER SECTION **************/
+/* Log Out Button */
+.logOut {
+    border: 0.1rem solid #FE6594;
+    border-radius: 5rem;
+    background-color: white;
+    color: #FE6594;
+    padding: 1rem 4rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.logOut:hover {
+    color: #FE6594;
+    box-shadow: 5px 5px #FFDB5C;
+}
+
+
+/* Toggle Button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  height: 38px;
+  margin-right: 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 60px;
+  left: 3px;
+  bottom: 0.2rem;
+  top: 0.2rem;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FE6594;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #FE6594;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(64px);
+  -ms-transform: translateX(64px);
+  transform: translateX(64px);
+}
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 34px;
+}
+
+/* Scheduled Calls Tables + Requested Calls Table */
+table.table-bordered{
+    border:1px solid #FFDB5C;
+    margin-top:20px;
+}
+
+table.table-bordered > thead > tr > th{
+    color: #FE6594;
+    border:1px solid #FFDB5C;
+}
+
+table.table-bordered > tbody > tr > td{
+    border:1px solid #FFDB5C;
+}
+
+
+/* Scheduled Calls Table */
+#SCheader {
+    color: #FE6594;
+}
+
+
+
+/* Requested Calls Table */
+#RCheader {
+    color: #FE6594;
+}
