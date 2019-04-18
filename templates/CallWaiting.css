@@ -9,7 +9,6 @@
 body {
     background-color: #FDFDFD;
     font-family: 'Roboto Slab', serif;
-
 }
 
 nav {
@@ -38,6 +37,7 @@ a {
     color: #FE6594;
 }
 
+
 .navbar-right a:hover {
     color: #FE6594;
 }
@@ -61,6 +61,10 @@ a {
     text-shadow: 0px 1px #FE6594;
 }
 
+#btn-nav {
+    margin-top: -50rem;
+}
+
 .btn {
     border: 0.1rem solid #FE6594;
     border-radius: 5rem;
@@ -79,4 +83,157 @@ a {
 
 .col-12 p {
     color: #FE6594;
+}
+
+/* Main Screen on Homepage */
+#CW {
+    color: #FFDB5C;
+    font-family: 'Pacifico', cursive;
+}
+
+#blockOne {
+    margin-top: 20rem;
+}
+
+.col-md-6 h1 {
+    margin: 20rem 10rem 3rem 10rem;
+}
+
+.col-md-6 h2 {
+    margin-top: 4rem;
+    margin-left: 10rem;
+}
+
+
+#typed {
+    font-size: 36px;
+    margin-left: 9rem;
+
+}
+
+/* iPhone Animation */
+
+:root {
+  --msg-content-height: 26.75em; /* 26.75*/
+  --msg-spacing: 1em;
+  --msg1-height: 5.5em;
+  --msg2-height: 4em;
+  --msg3-height: 2.5em;
+  --msg4-height: 2.5em;
+  --msg5-height: 4em;
+  --msg6-height: 3.25em;
+}
+
+.msg-send {
+    margin-top: 7rem;
+    position: absolute;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.msg-container {
+  width: 28em;
+}
+
+.msg-content {
+  height: var(--msg-content-height);
+}
+
+
+/*Animation Names*/
+
+#msg1 {
+  animation-name: msg1;
+}
+
+
+/*Key Frames*/
+
+@keyframes msg1 {
+  0% {
+    top: calc(var(--msg-content-height) - var(--msg1-height));
+    left: -4em;
+    transform: scale(0);
+  }
+  5% {
+    top: calc(var(--msg-content-height) - var(--msg1-height));
+    left: 0;
+    transform: scale(1);
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+/**/
+
+
+#page-container {
+  width: 100%;
+  height: 100%;
+}
+
+#dialog-container {
+  /** border: dashed 2px pink; **/
+  width: 282px;
+  min-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.dialog-box {
+  position: relative;
+  min-height: 80px;
+  max-height: 180px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+.dialog-box .header {
+  height: 25px;
+  position: relative;
+  color: black;
+}
+
+.background-blur {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+}
+
+.left {
+  float: left;
+  text-align: left;
+  width: content-max;
+  padding: 3px 0 0 10px;
+}
+
+.right {
+  float: right;
+  text-align: right;
+  width: content-max;
+  padding: 3px 10px 0 0;
+}
+
+.contents {
+  z-index: 100;
+  position: inherit;
+  font-size: 0.8em;
+}
+
+.main-content {
+  padding: 8px 20px 10px 10px;
+  height: content-max;
+}
+
+img {
+    width: 14px;
+    height: 14px;
 }
