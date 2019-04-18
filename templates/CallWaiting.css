@@ -322,6 +322,11 @@ input:checked + .slider:before {
 }
 
 /* Scheduled Calls Tables + Requested Calls Table */
+#tableContainer {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
 table.table-bordered{
     border:1px solid #FFDB5C;
     margin-top:20px;
@@ -343,8 +348,50 @@ table.table-bordered > tbody > tr > td{
 }
 
 
-
 /* Requested Calls Table */
 #RCheader {
     color: #FE6594;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Panel */
+.selectCallbtn {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #FE6594;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.panel-body {
+    display: none;
+}
+
+.panel-body, .flip {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+}
+
+#panel, .flip {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+}
+
+#panel {
+  display: none;
 }

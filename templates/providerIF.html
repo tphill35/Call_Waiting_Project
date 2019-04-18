@@ -65,70 +65,122 @@
     </nav>
 
     <!-- Scheduled Calls Table -->
-    <div class="container">
+    <div id="tableContainer">
       <h2 id="SCheader">Scheduled Calls</h2>
       <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wedesneday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr>
-          <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-        </tbody>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wedesneday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9:00 am</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>9:15 am</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>9:30 am</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>9:00 am</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>9:15 am</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>9:30 am</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>john@example.com</td>
+              </tr>
+            </tbody>
       </table>
     </div>
 
     <!-- Requested Calls Table -->
-    <div class="container">
+    <div id="tableContainer">
       <h2 id="RCheader">Requested Calls</h2>
       <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr>
-          <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
+            <td>
+                <div class="panel panel-default">
+                  <div class="panel-heading flip" onclick="myFunction()">
+                      <b name="apptDate">Thursday, May 2nd @ 9:30 AM</b>
+                      <span class="glyphicon glyphicon-info-sign pull-right"
+                      aria-hidden="true"></span>
+                  </div>
+                  <div class="panel-body">
+                      <h5>Reason</h5>
+                      <p>
+                          I received my tuition bill. However, my scholarship
+                          was not deducated from the total cost for Fall 2019
+                          semester.
+                      </p>
+                      <button class="selectCallbtn" type="button" onclick="openForm()">SELECT CALL</button>
+                  </div>
+                </div>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
 
+    <script>
+    function myFunction() {
+      document.getElementByClassName("panel-body").style.display = "block";
+    }
+    </script>
+
+
+    <p class="flip" onclick="myFunction()">Click to show panel</p>
+
+<div id="panel">
+  <p>This panel contains a div element, which is hidden by default (display: none).</p>
+  <p>It is styled with CSS and we use JavaScript to show it (display: block).</p>
+  <p>How it works: Notice that the p element with class="flip" has an onclick attribute attached to it. When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
+  <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("panel").style.display = "block";
+}
+</script>
 
 
 </body>
