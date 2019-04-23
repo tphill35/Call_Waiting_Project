@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Company Request</title>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- Pacifico font for Logo -->
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+<!-- Roboto Slab font for everything else -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
+    
+    <style>
+        /* Homepage */
+body {
+    background-color: #FDFDFD;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+nav {
+    margin: 1.5rem;
+}
+
+h6 {
+    color: #FE6594
+}
+
+/* Logo */
+#logo {
+    color: #FFDB5C;
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+}
+
+/* Navigation Bar */
+.nav-item {
+    font-family: 'Roboto Slab', serif;
+    /* font-size: 1.5rem; maybe consider it to make it appear larger */
+    font-weight: 300;
+}
+
+a {
+    color: #FE6594;
+}
+
+.navbar-right a:hover {
+    color: #FE6594;
+}
+
+.navbar-right  a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    background: #FE6594;;
+    transition: width 0.5s;
+}
+
+.navbar-right a:hover::after {
+    width: 100%;
+}
+
+
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: transparent;
+    text-shadow: 0px 1px #FE6594;
+}
+
+.btn {
+    border: 0.1rem solid #FE6594;
+    border-radius: 5rem;
+    background-color: white;
+    color: #FE6594;
+    padding: 0.5rem 3rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.btn:hover {
+    color: #FE6594;
+    box-shadow: 5px 5px #FFDB5C;
+}
+
+.col-12 p {
+    color: #FE6594;
+}
+
+
+    #rtxtbox {
+    border-radius: 25px;
+    border: 2px solid #FE6594;
+    padding: 20px; 
+    width: 50%;
+    height: 50%;
+    margin-bottom: .5in;
+    margin-left: auto;
+    margin-right: auto;
+
+       
+    
+}
+
+
+textarea{
+    height: auto;
+    resize: none;
+    
+}
+
+.button {
+  border-radius: 25px;
+  background-color: #fe6594; /* Green */
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.button:hover{
+
+    background-color: #FFDB5C;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" id="logo">CallWaiting</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <!-- right align -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Why CallWaiting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Request A Demo!</a>
+                        </li>
+                    </ul>
+                    <button class="btn" type="button">Customer Login</button>
+                    <button class="btn" type="button">Provider Login</button>
+                </div>
+            </div>
+        </nav>    
+
+        
+        <h1> </h1>
+        <form>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="rtxtbox" align="center">
+                <div class="form-group">
+                  <label for="Company E-mail" style="font-family: Roboto Slab; font-size: 20px; color: #FE6594 ">Email address</label>
+                  <input type="email" class="form-control" id="CompanyEmail" placeholder="Company@example.com" style="font-family: Roboto Slab;">
+
+                  <br>
+                  <br>
+                    
+                  <label for="Company Phone Number" style="font-family: Roboto slab; font-size: 20px; color: #FE6594;">Company Phone Number</label>
+                  <input type="tel" alignment=center class="form-control" id=""CompanyPhone" placeholder="555-555-5555" style="font-family:Roboto Slab;">
+
+                  <br>
+                  <br>
+                  
+                  
+                  <label for="Description" style="font-family: Roboto slab; font-size: 20px; color: #FE6594;">Request</label>
+                  <textarea rows="10" class="form-control" style="font-family:Roboto Slab;" placeholder="Write why you want this company to adopt CallWaiting"> </textarea>
+                  <br><br>
+                </div>
+                <a href="#" class="button" style="font-family: Roboto Slab">Submit</a
+                
+                </div>
+                    
+
+              </form>
+              <br>
+
+</body>
+</html>
