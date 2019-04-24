@@ -22,41 +22,23 @@
 	
 	<link rel="stylesheet" href="CallWaiting.css">
 	
-	<script>
-	$(function(){
-		$("#nav").load("/static/nav.html");
-		$("#footer").load("/static/footer.html");
+	<link rel="stylesheet" href="login.css" type="text/css">
+	
+    <script>
+    $(function(){
+        $("#nav").load("/static/nav.html");
+        $("#footer").load("/static/footer.html");
     });
     </script>
-	-->
 </head>
 
 <body>
-	<!-- navigation -->
-    <nav>
+    <!-- navigation -->
+    <nav class="navbar navbar-light">
         <div id="nav"></div>
     </nav>
-
-    <!--
-    <form method="POST" action="/main">
-        <p>Username: </p>
-        <input name="customerUsername">
-        <p>Password: </p>
-        <input name="customerPassword">
-        <input type="submit" name='login' value="User Login">
-    </form>
-
-    <a href="/register">Get a free account</a>
-
-    <form method="POST" action="/main">
-        <p>Username: </p>
-        <input name="providerUsername">
-        <p>Password: </p>
-        <input name="providerPassword">
-        <input type="submit" name='login' value="Provider Login">
-    </form>
-    -->
 	
+	<!-- main -->
     <div class = "main-text" style="width:800px;margin:auto;padding:30px 50px;background-color:#FE6594;">
 		<h1>Why Callwaiting</h1>
 		<p>
@@ -104,7 +86,7 @@
 		</p>
 		<p></p>
 		<p>
-		Don't take our word for it: <a href="#" style="color:blue;">Request A Demo!</a>
+		Don't take our word for it: <a href="demo.html" style="color:blue;">Request A Demo!</a>
 		We offer trials to companies who want to test out
 		our product before they commit to a plan. We hope
 		to talk soon!
@@ -118,6 +100,6 @@
     <footer>
         <div id="footer"></div>
     </footer>
-
+	
 </body>
 </html>
