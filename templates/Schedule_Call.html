@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>Schedule a Call</title>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- Pacifico font for Logo -->
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+<!-- Roboto Slab font for everything else -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
+    
+    <style>
+        /* Homepage */
+body {
+    background-color: #FDFDFD;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+nav {
+    margin: 1.5rem;
+}
+
+h6 {
+    color: #FE6594
+}
+
+/* Logo */
+#logo {
+    color: #FFDB5C;
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+}
+
+/* Navigation Bar */
+.nav-item {
+    font-family: 'Roboto Slab', serif;
+    /* font-size: 1.5rem; maybe consider it to make it appear larger */
+    font-weight: 300;
+}
+
+a {
+    color: #FE6594;
+}
+
+.navbar-right a:hover {
+    color: #FE6594;
+}
+
+.navbar-right  a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    background: #FE6594;;
+    transition: width 0.5s;
+}
+
+.navbar-right a:hover::after {
+    width: 100%;
+}
+
+
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: transparent;
+    text-shadow: 0px 1px #FE6594;
+}
+
+.btn {
+    border: 0.1rem solid #FE6594;
+    border-radius: 5rem;
+    background-color: white;
+    color: #FE6594;
+    padding: 0.5rem 3rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.btn:hover {
+    color: #FE6594;
+    box-shadow: 5px 5px #FFDB5C;
+}
+
+.col-12 p {
+    color: #FE6594;
+}
+
+
+    #rtxtbox {
+    border-radius: 25px;
+    border: 2px solid #FE6594;
+    padding: 20px; 
+    width: 50%;
+    height: 50%;
+    margin-bottom: .5in;
+    margin-left: auto;
+    margin-right: auto;
+
+       
+    
+}
+
+
+textarea{
+    height: auto;
+    resize: none;
+    
+}
+
+.button {
+  border-radius: 25px;
+  background-color: #fe6594; /* Green */
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 10;
+  width: 15;
+  cursor: pointer;
+  align-self: center;
+}
+
+
+
+.button:hover{
+
+    background-color: #FFDB5C;
+}
+
+select{
+    display: inline;
+    background-color: whitesmoke;
+    size: 30px;
+    text-align: center;
+    width: 200px;
+    height: auto;
+}
+
+label{
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" id="logo">CallWaiting</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <!-- right align -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="CallWaiting_Home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CallWaiting_How_It_Works.html">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CallWaiting_Why.html">Why CallWaiting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CallWaiting_Request_A_Demo.html">Request A Demo!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+            
+            <form>
+        <div id="rtxtbox">
+              <div class="form-group" style="font-family: Roboto Slab; font-size: 20px; color: #FE6594;">
+                
+                <label for="Company">Company</label>
+                <select>
+                        <option value="Huntington" style="font-family: Roboto Slab;"">Johnny</option>
+                </select>
+                <label for="Department">Department</label>
+                <select>
+                        <option value="Accounting" style="font-family: Roboto Slab;"">Johnny</option>
+                </select>
+
+                <br>
+
+                <label for="Agent" >Agent</label>
+                <select>
+                <option value="Johnny" style="font-family: Roboto Slab;"">Johnny</option>
+                <option value="Jeff" style="font-family: Roboto Slab;"">Jeff</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="Date">Date</label>
+                <input type="date" name="Appointment" min="auto" required>
+                
+                <label for="Time">Time</label>
+                <input type="time" id="TimeStart" name="TimeStart" step="15" required>
+                <br />
+                <label for="TimeEstimate">Estimted Time</label>
+                <input type="number" id="appt" name="appt" min="15" max="60" step="15" required>
+                <br>
+                <label for="Description" style="font-family: Roboto slab; font-size: 20px; color: #FE6594;">Description</label>
+                <textarea rows="10" class="form-control" id="Request" placeholder="Leave a brief description of the Appointment" style="font-family:Roboto Slab;" required ></textarea>
+                <br>
+                <input type="submit" class="button" value="Send">
+                
+                <div class="container">
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <input type='text' class="form-control" id='datetimepicker4' />
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                <br>
+
+                <div class="container">
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker5'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(function () {
+                                    $('#datetimepicker5').datetimepicker({
+                                        defaultDate: "11/1/2013",
+                                        disabledDates: [
+                                            moment("12/25/2013"),
+                                            new Date(2013, 11 - 1, 21),
+                                            "11/22/2013 00:53"
+                                        ]
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+              </form>
+
+              
+            </div>
+        </div>
+    </nav>
+    </body>
+    </html>
