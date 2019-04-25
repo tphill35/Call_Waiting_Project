@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Manage "Company Name"</title>
+    <title> Manage "get_company_name"</title>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -35,16 +35,51 @@
 			padding-top:15px;
 			padding-left:15px;
 			padding-bottom:15px;">
-			<div>Max Calls: [box here]</div>
-			<div>Call Length Limit: [box here]</div>
+			<div>
+				<label for="maxcalls"><b>Max Calls:</b></label>
+				<input type="text" placeholder="get_call_limit" name="calllimit" required>
+			</div>
+			<div>Call Length Limit: [box here]
+				<label for="maxcalllength"><b>Call Length Limit:</b></label>
+				<input type="text" placeholder="get_call_length_limit" name="calllengthlimit" required>
+			</div>
 		</div>
 	</div>
 	
 	<div id="agentlist" style="margin:15px;">
 		<div style="color:#FE6594">
-			Agents &nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#">Remove</a>
+			Agents&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="btn" onclick="openAddForm()">Add</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="btn" onclick="openRemoveForm()">Remove</button>
+			<div class="form-popup" id="AddForm">
+				<form action="/main" class="form-container"><!--need to change-->
+					<h1>Add New Agent</h1>
+
+					<label for="email"><b>Email:</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+
+					<label for="firstname"><b>First Name:</b></label>
+					<input type="text" placeholder="Enter First Name" name="firstname" required>
+
+					<label for="lastname"><b>Last Name:</b></label>
+					<input type="text" placeholder="Enter Last Name" name="lastname" required>
+					
+					<button type="submit" class="btn login">Submit</button>
+					<button type="button" class="btn cancel" onclick="closeAddForm2()">Cancel</button>
+				</form>
+			</div>
+			<div class="form-popup" id="RemoveForm">
+				<form action="/main" class="form-container"><!--need to change-->
+					<h1>Remove Agent</h1>
+
+					<label for="agentid"><b>ID:</b></label>
+					<input type="text" placeholder="Enter ID" name="agentid" required>
+	
+					<button type="submit" class="btn login">Submit</button>
+					<button type="button" class="btn cancel" onclick="closeRemoveForm()">Cancel</button>
+				</form>
+			</div>
 		</div>
 		<div style="
 			width:900px;
@@ -53,9 +88,10 @@
 			padding-top:15px;
 			padding-left:15px;
 			padding-bottom:15px;"> 
-			<!--list agent names here
-			Click on remove up then agent name to remove-->
-			<a href="#">Paul Blart</a>
+			<!--list agent id, names here-->
+			<!--Click on remove up then agent name to remove later?-->
+			<!--get_company_agents(id)-->
+			ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paul Blart
 		</div>
 	</div>
 	
