@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Manage "get_company_name"</title>
+    <title> Manage {{ dash['get_company_name'] }}</title>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,13 +21,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="CallWaiting.css" type="text/css">
+	
+	<script type="text/javascript" src="js.js"></script>
 </head>
 
 <body>
 	<!-- navigation -->
 	
 	<div id="calllimit" style="margin:15px;color:#FE6594;">
-		Call Limits
+		<b>Call Limits</b>
 		<div style="
 			width:900px;
 			margin-top:5px;
@@ -39,7 +41,7 @@
 				<label for="maxcalls"><b>Max Calls:</b></label>
 				<input type="text" placeholder="get_call_limit" name="calllimit" required>
 			</div>
-			<div>Call Length Limit: [box here]
+			<div>
 				<label for="maxcalllength"><b>Call Length Limit:</b></label>
 				<input type="text" placeholder="get_call_length_limit" name="calllengthlimit" required>
 			</div>
@@ -48,39 +50,38 @@
 	
 	<div id="agentlist" style="margin:15px;">
 		<div style="color:#FE6594">
-			Agents&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<button class="btn" onclick="openAddForm()">Add</button>
+			<b>Agents</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button type="button" id="AddFormButton">Add</button>
 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<button class="btn" onclick="openRemoveForm()">Remove</button>
-			<div class="form-popup" id="AddForm">
-				<form action="/main" class="form-container"><!--need to change-->
-					<h1>Add New Agent</h1>
-
-					<label for="email"><b>Email:</b></label>
+			<button type="button" id="RemoveFormButton">Remove</button>
+			
+			<form id="AddForm" style="display:none;background-color:#FDFDFD;width:400px;margin:20px 50px;">
+				<h4>Add New Agent</h4>
+				<div>
+					<label for="email">Email:</label>
 					<input type="text" placeholder="Enter Email" name="email" required>
-
-					<label for="firstname"><b>First Name:</b></label>
+				</div>
+				<div>
+					<label for="firstname">First Name:</label>
 					<input type="text" placeholder="Enter First Name" name="firstname" required>
-
-					<label for="lastname"><b>Last Name:</b></label>
+				</div>
+				<div>
+					<label for="lastname">Last Name:</label>
 					<input type="text" placeholder="Enter Last Name" name="lastname" required>
-					
-					<button type="submit" class="btn login">Submit</button>
-					<button type="button" class="btn cancel" onclick="closeAddForm2()">Cancel</button>
-				</form>
-			</div>
-			<div class="form-popup" id="RemoveForm">
-				<form action="/main" class="form-container"><!--need to change-->
-					<h1>Remove Agent</h1>
-
-					<label for="agentid"><b>ID:</b></label>
+				</div>
+				<button type="button">Submit</button>
+			</form>
+			
+			<form id="RemoveForm" style="display:none;background-color:#FDFDFD;width:400px;margin:20px 50px;">
+				<h4>Remove Agent</h4>
+				<div>
+					<label for="agentid">ID:</label>
 					<input type="text" placeholder="Enter ID" name="agentid" required>
-	
-					<button type="submit" class="btn login">Submit</button>
-					<button type="button" class="btn cancel" onclick="closeRemoveForm()">Cancel</button>
-				</form>
-			</div>
+				</div>
+				<button type="button">Submit</button>
+			</form>
 		</div>
+
 		<div style="
 			width:900px;
 			margin-top:5px;
@@ -91,7 +92,11 @@
 			<!--list agent id, names here-->
 			<!--Click on remove up then agent name to remove later?-->
 			<!--get_company_agents(id)-->
-			ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paul Blart
+			{% for result in dash['agentlist'] %}
+				<tr>
+					<td>result</td>
+				</tr>
+			{% endfor %}
 		</div>
 	</div>
 	

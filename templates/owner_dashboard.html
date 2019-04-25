@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>"Company Name" - Dashboard</title>
+    <title>{{ dash['get_company_name'] }} - Dashboard</title>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -39,7 +39,11 @@
 			Perhaps each name is a link to a dropdown
 			menu with that agent's recent activity?-->
 			<!--get_company_agents(id)-->
-			Paul Blart
+			{% for result in dash['agentlist'] %}
+				<tr>
+					<td>result</td>
+				</tr>
+			{% endfor %}
 		</div>
 	</div>
 
