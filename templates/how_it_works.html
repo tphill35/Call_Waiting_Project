@@ -22,8 +22,8 @@
 
     <link rel="stylesheet" href="CallWaiting.css">
 	
-	<script>
-	$(function(){
+    <script>
+    $(function(){
         $("#nav").load("/static/nav.html");
         $("#footer").load("/static/footer.html");
     });
@@ -31,31 +31,12 @@
 </head>
 
 <body>
-	<!-- navigation -->
-    <nav>
+    <!-- navigation -->
+    <nav class="navbar navbar-light">
         <div id="nav"></div>
     </nav>
-
-    <!--
-    <form method="POST" action="/main">
-        <p>Username: </p>
-        <input name="customerUsername">
-        <p>Password: </p>
-        <input name="customerPassword">
-        <input type="submit" name='login' value="User Login">
-    </form>
-
-    <a href="/register">Get a free account</a>
-
-    <form method="POST" action="/main">
-        <p>Username: </p>
-        <input name="providerUsername">
-        <p>Password: </p>
-        <input name="providerPassword">
-        <input type="submit" name='login' value="Provider Login">
-    </form>
-    -->
 	
+	<!-- main -->
 	<h1 style="width:800px;margin:auto;padding:15px 50px;">How It Works</h1>
 	
 	<div id="flowchart" style="width:400px;margin:15px auto;padding:50px;background-color:#e6e6e6;">
