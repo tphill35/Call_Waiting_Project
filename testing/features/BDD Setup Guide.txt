@@ -1,0 +1,19 @@
+Note: I've only done this for windows but it should be the same for mac and linux.
+
+First you'll need to install python. Go here https://www.python.org/downloads/release/python-373/ and choose the 
+appropriate installer. I'd recommend installing to somewhere accessible like C:\Python37, and make sure pip is included.
+
+Next you'll need to install selenium and behave. To do this, open up your CLI and navigate to Python37\Scripts. 
+Enter "pip install -U selenium behave".
+
+You'll also need a webdriver for your browser. If you want the browser to stay open after testing, use firefox.
+For firefox: https://github.com/mozilla/geckodriver/releases
+For chrome: https://sites.google.com/a/chromium.org/chromedriver/downloads
+Move the webdriver to your scripts folder.
+
+Now you should copy the directory of the features folder (if you pulled it from github, it will be in your github folder).
+To run behave, again go to the scripts directory in your CLI and enter "behave [features directory]".
+
+If you're on windows, you may want to create a batch file. To do this make a new file and enter the following with
+your respective directories and save it as .bat:
+START cmd.exe /k "cd C:\Python37\Scripts & behave C:\Users\Nathan\Documents\GitHub\Call_Waiting_Project\testing\features"
