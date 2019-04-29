@@ -9,5 +9,11 @@ Feature: sign up to Call Waiting
 	Scenario: Sign up as a caller
 		Given we are at the sign up page
 		When we fill in all fields
-		And we click submit
+		And we click Submit
 		Then we should be able to login
+		
+	Scenario: Log in as a caller
+		Given we are at the homepage
+		When we click on Customer Login
+		And we enter our email and password and hit enter
+		Then we should be logged in

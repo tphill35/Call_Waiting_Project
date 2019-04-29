@@ -19,6 +19,8 @@ except:
 firstName = randomString(6)
 lastName = randomString(6)
 password = randomString(8)
+email = 'ngeiger2@kent.edu'
+phone = '330-697-5806'
 
 #Scenario: navigate to sign up page
 
@@ -59,22 +61,38 @@ def step_impl(context):
         elem.send_keys(lastName)
         #Email
         elem = context.browser.find_element_by_name('email')
-        elem.send_keys('veryhomo@cock.li')
+        elem.send_keys(email)
         #Phone
         elem = context.browser.find_element_by_name('phonenumber')
-        elem.send_keys('222-222-2222')
+        elem.send_keys(phone)
         #Password
         elem = context.browser.find_element_by_name('psw')
-        elem.send_keys('benis789')
+        elem.send_keys(password)
         #Confirm pw
         elem = context.browser.find_element_by_name('psw-repeat')
-        elem.send_keys('benis789')
+        elem.send_keys(password)
 
-@when(u'we click submit')
+@when(u'we click Submit')
 def step_impl(context):
         assert 1
 
 @then(u'we should be able to login')
 def step_impl(context):
         assert 1
+
+#Scenario: log in as caller (stub)
+
+@when(u'we enter our email and password and hit enter')
+def step_impl(context):
+        elem = context.browser.find_element_by_name('email')
+        elem.send_keys(email)
+        elem = context.browser.find_element_by_name('psw')
+        elem.send_keys(password)
+        elem.send_keys(Keys.ENTER)
+
+@then(u'we should be logged in')
+def step_impl(context):
+        assert 1
+        #assert 'http://callwaiting.pythonanywhere.com/main' in context.browser.title
+
 
