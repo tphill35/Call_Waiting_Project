@@ -1,0 +1,139 @@
+/*
+
+#FDFDFD - white with a tint of light gray
+#FFDB5C - yellow
+#FE6594 - pink
+*/
+
+/* ===== Whole Page ===== */
+body {
+    background-color: #FDFDFD;
+    font-family: 'Roboto Slab', serif;
+}
+
+nav {
+    margin: 1.5rem;
+}
+
+/* ===== Navigation ===== */
+#logo {
+    color: #FFDB5C;
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+}
+
+
+.nav-item {
+    font-family: 'Roboto Slab', serif;
+    /* font-size: 1.5rem; maybe consider it to make it appear larger */
+    font-weight: 300;
+}
+
+.btn {
+    border: 0.1rem solid #FE6594;
+    border-radius: 5rem;
+    background-color: white;
+    color: #FE6594;
+    padding: 0.5rem 3rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.btn:hover {
+    color: #FE6594;
+    box-shadow: 5px 5px #FFDB5C;
+}
+
+.col-12 p {
+    color: #FE6594;
+}
+
+.logOut {
+    border: 0.1rem solid #FE6594;
+    border-radius: 5rem;
+    background-color: white;
+    color: #FE6594;
+    padding: 1rem 4rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.logOut:hover {
+    color: #FE6594;
+    box-shadow: 5px 5px #FFDB5C;
+}
+
+.tableContainer {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-top: 1rem;
+    background-color: #FFFFFF;
+    border:1px solid #FFDB5C;
+}
+
+#customerNav {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+#customerNav li {
+    margin-right: 6rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#customerNav .navbar-nav > li > a {
+  color: #FE6594;
+}
+
+#customerNav .navbar-nav > li > a:hover {
+  color: #CB5076;
+}
+
+#customerNav .navbar-nav > li > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    background: #FE6594;;
+    transition: width 0.5s;
+}
+
+#customerNav .navbar-nav > li > a:hover::after {
+    width: 100%;
+}
+
+/* ===== Dashboard Main Info ===== */
+/* Landing dashboards that displays Customers calls */
+#dashboardTable {
+    margin-left: 3rem;
+    padding-bottom: 40rem;
+}
+
+
+/* ===== Footer ===== */
+#footerFeedback p > a {
+  color: #FE6594;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#footerFeedback p > a:hover {
+  color: #CB5076;
+  text-decoration: none;
+}
+
+#footerFeedback p > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    background: #FE6594;;
+    transition: width 0.5s;
+}
+
+#footerFeedback p > a:hover::after {
+    width: 100%;
+}

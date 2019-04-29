@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CallWaiting</title>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="lib/typed.js" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- Pacifico font for Logo -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- Roboto Slab font for everything else -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
+    <!-- Typed.js by Matt Boldt -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <!-- iPhone -->
+	<link rel="stylesheet" href="devices.min.css" type="text/css">
+    <script type="text/javascript" src="customer.js"></script>
+
+    <link rel="stylesheet" href="customer.css">
+
+</head>
+
+
+<body>
+
+
+
+    <!-- navigation -->
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand" id="logo">CallWaiting</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="btn-nav">
+                <!-- right align -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <button class="logOut" type="button">Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scheduled Calls Table -->
+    <div class="tableContainer">
+      <nav class="navbar navbar-default" id="customerNav">
+          <div class="container-fluid" >
+            <ul class="nav navbar-nav">
+              <li><a href="#">User Profile</a></li>
+              <li><a href="#">Manage Account</a></li>
+              <li><a href="#">Edit A Call</a></li>
+              <li><a href="#">Schedule A Call</a></li>
+              <li><a href="#">Request A Company Get CallWaiting</a></li>
+            </ul>
+          </div>
+      </nav>
+
+      <div class="container" id="dashboardTable">
+          <h2>Scheduled Calls</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th id="companyName">Business</th>
+                <th id="date">Date</th>
+                <th id="time">Time</th>
+                <th id="reason">Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kent State</td>
+                <td>Thursday, May 2</td>
+                <td>9:30am</td>
+                <td>john@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <footer>
+        <div class="container-fluid padding">
+          <div class="text-center" id="footerFeedback">
+            <div>
+                <p><a href="#">Provider CallWaiting Feedback</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+
+
+</body>
+</html>

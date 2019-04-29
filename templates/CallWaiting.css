@@ -257,7 +257,7 @@ img {
 }
 
 
-/* Toggle Button */
+/* ===== Toggle Button ===== */
 .switch {
   position: relative;
   display: inline-block;
@@ -311,8 +311,12 @@ input:checked + .slider:before {
   transform: translateX(64px);
 }
 
+#singleDayView{
+  display: none;
+}
 
-/* Rounded sliders */
+
+/* ===== Rounded sliders ===== */
 .slider.round {
   border-radius: 34px;
 }
@@ -321,11 +325,14 @@ input:checked + .slider:before {
   border-radius: 34px;
 }
 
-/* Scheduled Calls Tables + Requested Calls Table */
-#tableContainer {
+
+
+/* ===== Scheduled Calls Tables + Requested Calls Table ===== */
+.tableContainer {
     margin-left: 3rem;
     margin-right: 3rem;
 }
+
 
 table.table-bordered{
     border:1px solid #FFDB5C;
@@ -339,16 +346,95 @@ table.table-bordered > thead > tr > th{
 
 table.table-bordered > tbody > tr > td{
     border:1px solid #FFDB5C;
+    background-color: #FFFFFF;
 }
 
+#SCtable tr td:first-child {
+    background-color: #FDFDFD;
+}
 
-/* Scheduled Calls Table */
+/* ===== Scheduled Calls Table ===== */
 #SCheader {
     color: #FE6594;
 }
 
+table th {
+    font-size: 2rem;
+}
 
-/* Requested Calls Table */
+table p {
+    color: #FE6594;
+    font-weight: 300;
+}
+
+.panel2 {
+    position: relative;
+}
+
+.scheduleFlip b {
+    color: black;
+}
+
+.scheduleFlip span {
+    color: #FE6594;
+}
+
+.scheduleFlip {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #FFDB5C;
+  color: white;
+  border: solid 1px #D8D8D8;
+  margin: auto;
+}
+
+#scheduledPanel h4, p {
+    color: black;
+    text-align: left;
+}
+
+#scheduledPanel p {
+    font-style: 'Roboto Slab';
+    font-weight: 300;
+}
+
+#scheduledPanel {
+  display: none;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #E3E3E3;
+  color: white;
+  border: solid 1px #D8D8D8;
+  margin: auto;
+  position: absolute;
+}
+
+/* ===== ScheduleCall singleDayView ===== */
+#SDVscheduledPanel h4, p {
+    color: black;
+    text-align: left;
+}
+
+#SDVscheduledPanel p {
+    font-style: 'Roboto Slab';
+    font-weight: 300;
+}
+
+#SDVscheduledPanel {
+  display: none;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #E3E3E3;
+  color: white;
+  border: solid 1px #D8D8D8;
+  margin: auto;
+  position: absolute;
+}
+
+/* ===== Requested Calls Table ===== */
 #RCheader {
     color: #FE6594;
     table-layout: fixed;
@@ -356,6 +442,35 @@ table.table-bordered > tbody > tr > td{
 }
 
 /* Panel */
+.flip b {
+    color: black;
+}
+
+.flip span {
+    color: #FE6594;
+}
+
+#requestPanel h4, p {
+    color: black;
+    text-align: left;
+}
+
+#requestPanel p {
+    font-style: 'Roboto Slab';
+    font-weight: 300;
+}
+
+#requestPanel {
+  display: none;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #E3E3E3;
+  color: white;
+  border: solid 1px #D8D8D8;
+  margin: auto;
+}
+
 .selectCallbtn {
     display: block;
     width: 100%;
@@ -368,30 +483,12 @@ table.table-bordered > tbody > tr > td{
     text-align: right;
 }
 
-.panel-body {
-    display: none;
-}
-
-.panel-body, .flip {
+.flip {
   font-size: 16px;
   padding: 10px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: #FDFDFD;
   color: white;
-  border: solid 1px #a6d8a8;
+  border: solid 1px #D8D8D8;
   margin: auto;
-}
-
-#panel, .flip {
-  font-size: 16px;
-  padding: 10px;
-  text-align: center;
-  background-color: #4CAF50;
-  color: white;
-  border: solid 1px #a6d8a8;
-  margin: auto;
-}
-
-#panel {
-  display: none;
 }
