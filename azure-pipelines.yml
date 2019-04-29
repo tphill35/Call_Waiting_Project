@@ -1,4 +1,3 @@
-language: UsePythonVersion
 
 jobs:
 - job: 'Test'
