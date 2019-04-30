@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Schedule a Call</title>
+<title>Edit a Call</title>
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -122,9 +122,9 @@ textarea{
     
 }
 
-.button {
+.button1 {
   border-radius: 25px;
-  background-color: rgb(254, 132,169); /* Green */
+  background-color: rgb(112, 191, 115); /* Green */
   border: none;
   color: white;
   padding: 20px 32px;
@@ -138,12 +138,31 @@ textarea{
   align-self: center;
 }
 
+.button2 {
+  border-radius: 25px;
+  background-color: rgb(255, 51, 51); /* Green */
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 10;
+  width: 15;
+  cursor: pointer;
+  align-self: center;
+}
 
+.button1:hover{
+box-shadow: 5px 5px #FFDB5C;
+background-color: rgb(76, 175, 80);
 
-.button:hover{
+}
 
-    background-color: rgb(254, 101, 148);
-    box-shadow: 5px 5px #FFDB5C;
+.button2:hover{
+box-shadow: 5px 5px #FFDB5C;
+background-color: rgb(255, 0, 0);
 }
 
 select{
@@ -222,18 +241,19 @@ label{
                 <label for="Time">Time</label>
                 <input type="time" id="TimeStart" name="TimeStart" step="15" required>
                 <br />
-                <label for="TimeEstimate">Estimted Time (In Minutes)</label>
-                <input type="number" id="length" name="appt" min="15" max="120" step="15" required>
-                
+                <label for="TimeEstimate">Estimted Time</label>
+                <input type="number" id="length" name="appt" min="15" max="60" step="15" required>
                 <br>
                 <label for="Description" style="font-family: Roboto slab; font-size: 20px; color: #FE6594;">Description</label>
                 <textarea rows="10" class="form-control" id="Request" placeholder="Leave a brief description of the Appointment" style="font-family:Roboto Slab;" required ></textarea>
                 <br>
-                <input type="submit" class="button" value="Send">
+                <input type="submit" class="button1" value="Edit">
+                <input type="submit" class="button2" value="submit">
                 
                 <br>
-
+                
               </form>
+
               
             </div>
         </div>
@@ -265,7 +285,6 @@ label{
                 </div>
           
               </footer>
-
     </nav>
     </body>
     </html>
