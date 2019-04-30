@@ -11,8 +11,11 @@ install:
   - pip3 install --upgrade pip 
   - pip3 install mysql-connector
 
-  
+env:
+    flask=0.12.3
+
 script: python3 call_waiting.py || python call_waiting.py
+
 
 deploy:
   provider: releases
