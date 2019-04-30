@@ -14,4 +14,12 @@ install:
   
 script: python3 call_waiting.py || python call_waiting.py
 
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true
+
 
