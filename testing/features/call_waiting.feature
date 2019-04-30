@@ -3,7 +3,7 @@ Feature: sign up to Call Waiting
 	Scenario: Go to customer registration page
 		Given we are at the homepage
 		When we click on Customer Login
-		And we click on Create an Account
+		And we click on "Create an Account"
 		Then we should go to the customer registration page
 
 	Scenario: Sign up as a caller
@@ -11,9 +11,13 @@ Feature: sign up to Call Waiting
 		When we fill in all fields
 		And we click Submit
 		Then we should be able to login
-		
+
 	Scenario: Log in as a caller
 		Given we are at the homepage
 		When we click on Customer Login
 		And we enter our email and password and hit enter
 		Then we should be logged in
+
+	#Scenario: Schedule a call
+		#Given we are at the caller dashboard
+		#When we click on "Schedule A Call"

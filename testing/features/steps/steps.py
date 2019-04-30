@@ -6,8 +6,15 @@ import string
 
 #Random string generator
 def randomString(stringLength):
-    letters = string.ascii_lowercase
-    return ''.join(random.choice(letters) for i in range(stringLength))
+        letters = string.ascii_lowercase
+        return ''.join(random.choice(letters) for i in range(stringLength))
+
+#Url fetcher
+def getUrl(page):
+        if page == 'homepage':
+                return 'http://callwaiting.pythonanywhere.com'
+        elif page == 'sign up page':
+                return 'http://callwaiting.pythonanywhere.com/register'
 
 #Open browser
 try:
@@ -22,22 +29,24 @@ password = randomString(8)
 email = 'ngeiger2@kent.edu'
 phone = '330-697-5806'
 
-#Scenario: navigate to sign up page
+#Clicking links (NOTE: use "" to distinguish clicking on a link using link text)
+@when(u'we click on "{linktext}"')
+def step_impl(context, linktext):
+	elem = context.browser.find_element_by_link_text(linktext) #Find link text
+	elem.click() #Click on link
 
-@given(u'we are at the homepage')
-def step_impl(context):
+#Go to url
+@given(u'we are at the {page}')
+def step_impl(context, page):
 	context.browser = browser #Set browser
-	context.browser.get('http://callwaiting.pythonanywhere.com') #Go to home
+	context.browser.get(getUrl(page)) #Go to home
+
+#Scenario: navigate to sign up page
 
 @when(u'we click on Customer Login')
 def step_impl(context):
         elem = context.browser.find_elements_by_class_name('btn')[0] #Find first "btn" class
         elem.click()
-
-@when(u'we click on Create an Account')
-def step_impl(context):
-	elem = context.browser.find_element_by_link_text('Create an Account') #Find create account button
-	elem.click() #Click to go to create account page
 
 @then(u'we should go to the customer registration page')
 def step_impl(context):
@@ -45,11 +54,6 @@ def step_impl(context):
         #assert 'http://callwaiting.pythonanywhere.com/register' in context.browser.title
 
 #Scenario: sign up as caller (stub)
-
-@given(u'we are at the sign up page')
-def step_impl(context):
-        context.browser = browser #Set browser
-        context.browser.get('http://callwaiting.pythonanywhere.com/register') #Go to sign up
 
 @when(u'we fill in all fields')
 def step_impl(context):
@@ -80,7 +84,7 @@ def step_impl(context):
 def step_impl(context):
         assert 1
 
-#Scenario: log in as caller (stub)
+#Scenario: log in as caller
 
 @when(u'we enter our email and password and hit enter')
 def step_impl(context):
@@ -94,5 +98,4 @@ def step_impl(context):
 def step_impl(context):
         assert 1
         #assert 'http://callwaiting.pythonanywhere.com/main' in context.browser.title
-
 
