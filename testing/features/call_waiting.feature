@@ -17,6 +17,9 @@ Feature: sign up to Call Waiting
 		And we enter our email and password and hit enter
 		Then we should be logged in
 
-	#Scenario: Schedule a call
-		#Given we are at the caller dashboard
-		#When we click on "Schedule A Call"
+	Scenario: Schedule a call
+		Given we are at the caller dashboard
+		When we click on "Schedule A Call"
+		And we enter our appointment time and hit enter
+		Then the call should appear in our call list
+		And we should receive an email verifying our call
