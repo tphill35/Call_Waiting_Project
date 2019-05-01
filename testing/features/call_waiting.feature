@@ -8,8 +8,7 @@ Feature: sign up to Call Waiting
 
 	Scenario: Sign up as a caller
 		Given we are at the sign up page
-		When we fill in all fields
-		And we click Submit
+		When we fill in all fields and hit enter
 		Then we should be able to login
 
 	Scenario: Log in as a caller
